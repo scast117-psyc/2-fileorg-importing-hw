@@ -2,7 +2,7 @@
 #For full credit, provide answers for at least 6/8 questions
 
 #List names of students collaborating with (no more than 2): 
-
+#Name: Sarah Castro
 #GENERAL INFO 
 #for the love of god help usa all
 #data_A contains 12 files of data. 
