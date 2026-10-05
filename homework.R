@@ -4,6 +4,7 @@
 #List names of students collaborating with (no more than 2): 
 
 #GENERAL INFO 
+#for the love of god help usa all
 #data_A contains 12 files of data. 
 #Each file (6192_3.txt) notes the participant (6192) and block number (3)
 #The header contains metadata about the session
