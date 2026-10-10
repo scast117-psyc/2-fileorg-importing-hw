@@ -4,8 +4,7 @@
 #List names of students collaborating with (no more than 2): 
 #Name: Sarah Castro
 #GENERAL INFO 
-#for the love of god help usa all
-#helppppp
+
 #data_A contains 12 files of data. 
 #Each file (6192_3.txt) notes the participant (6192) and block number (3)
 #The header contains metadata about the session
@@ -18,9 +17,8 @@
 ### QUESTION 1 ------ 
 
 # Load the readr package
-
 # ANSWER
-
+library(readr)
 
 ### QUESTION 2 ----- 
 
