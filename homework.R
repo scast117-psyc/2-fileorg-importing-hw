@@ -2,7 +2,7 @@
 #For full credit, provide answers for at least 6/8 questions
 
 #List names of students collaborating with (no more than 2): 
-#Name: Sarah Castro
+#Name: Dylan and Amberley 
 #GENERAL INFO 
 
 #data_A contains 12 files of data. 
@@ -19,7 +19,9 @@
 # Load the readr package
 # ANSWER
 library(readr)
-
+library(here)
+library(tidyverse)
+library(fs)
 ### QUESTION 2 ----- 
 
 # Read in the data for 6191_1.txt using here()
@@ -36,8 +38,9 @@ library(readr)
 col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 # ANSWER
-
-
+library(here)
+getwd()
+ds1 <- read_csv(data_A/6191_1.txt)
 ### QUESTION 3a. ----- 
 
 # For some reason, the trial numbers for this experiment should start at 100
