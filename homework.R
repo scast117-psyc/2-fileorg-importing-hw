@@ -75,17 +75,17 @@ write_csv(ds1, file="data_A_cleaned/6191_1_2026_11_10.csv")
 
 # Use list.files() to get a list of the full file names of everything in "data_A"
 # Store it to a variable
-
 # ANSWER
-
-
+all_files_data_a <- list.files('data_A', full.names = TRUE)
+print(all_files_data_a)
 ### QUESTION 5 ----- 
 
 # Read all of the files in data_A into a single tibble called ds
 
 # ANSWER
 
-
+ds <- read_tsv(all_files_data_a, col_name=c("trial_num", "speed_actual","speed_response","correct"), skip=7)
+print(ds)
 ### QUESTION 6 -----
 
 # Try creating the "add 100" to the trial number variable again
