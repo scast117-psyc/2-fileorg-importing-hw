@@ -44,8 +44,9 @@ getwd()
 here("data_A/6191_1.txt")
 file.exists(here("data_A/6191_1.txt"))
 #Output comes back as true which means this file is in my wd
-ds1 <- read_tsv('data_A/6191_1.txt')
+ds1 <- read_tsv('data_A/6191_1.txt', col_name=c("trial_num","speed_actual","speed_response","correct"),skip=7)
 print(ds1)
+#you need to skip 7 rows because the first seven rows are not the actual data we are talking about...
 
 ### QUESTION 3a. ----- 
 
@@ -53,7 +54,10 @@ print(ds1)
 # Create a new column in ds1 that takes trial_num and adds 100
 
 # ANSWER
-
+ds1$trial_num2 <- ds1$trial_num + 100
+print(ds1)
+#item you make is new column name
+#you make by taking original column name and then just adding the number you want (in this case 100)
 
 ### QUESTION 3b. ----- 
 # Write the new data from question 3a to a CSV file in the "data_A_cleaned" folder
@@ -62,7 +66,10 @@ print(ds1)
 # Add one commend explaining your naming choice
 
 # ANSWER
-
+if (!dir.exists("data_A_cleaned")) dir.create("data_A_cleaned")
+#OMG IT WORKED
+write_csv(ds1, file="data_A_cleaned/6191_1_2026_11_10.csv")
+#I chose snake case since R uses snake_case for naming, and it allows me to look for them quicker knowing they do not contain spaces.I also like having dates at the end to make it easier to search. But let me know if this way is actually not good :)
 
 ### QUESTION 4 ----- 
 
