@@ -100,9 +100,11 @@ print(ds)
 
 # ANSWER
 ?read_tsv
-ds <- read_tsv(all_files_data_a,col_names = c("trial_num","speed_actual","speed_response","correct"),col_types="iccl")
+ds <- read_tsv(all_files_data_a,col_names = c("trial_num","speed_actual","speed_response","correct"),skip=7,col_types="iccl")
 print(ds)
-
+ds$trial_num2 <- ds$trial_num + 100
+print(ds)
+#iccl=integer, character, character, logical no need to separate by commas
 ### QUESTION 7 -----
 
 # Now that the column type problem is fixed, take a look at ds()
