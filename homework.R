@@ -105,6 +105,7 @@ print(ds)
 ds$trial_num2 <- ds$trial_num + 100
 print(ds)
 #iccl=integer, character, character, logical no need to separate by commas
+
 ### QUESTION 7 -----
 
 # Now that the column type problem is fixed, take a look at ds()
@@ -113,8 +114,11 @@ print(ds)
 # Re-import the data so that filename becomes a column
 
 # ANSWER
-
-
+?read_tsv
+ds <- read_tsv(all_files_data_a, col_names = c("trial_num","speed_actual","speed_response","correct"),skip=7,col_types="iccl",id= "participant_id")
+ds$trial_num2 <- ds$trial_num +100
+print(ds)
+#"id" isn't an actual like specific thing in r, you can just make it whatever you want to call it because r will look through the files and say where they are from, so we could name it something other than participant
 ### QUESTION 8 -----
 
 # Your PI emailed you an Excel file with the list of participant info 
@@ -122,4 +126,11 @@ print(ds)
 # There are two sheets of data -- import each one into a new tibble
 
 # ANSWER
-
+install.packages("readxl")
+library(readxl)
+read_excel("data_B/participant_info.xlsx")
+sheet1 <- read_excel("data_B/participant_info.xlsx", sheet=1)
+print(sheet1)
+sheet2 <- read_excel("data_B/participant_info.xlsx", sheet=2, col_names = FALSE)
+print(sheet2)
+#needed col_names False to be able to have correct formatting for sheet 2 because our first column does have data
