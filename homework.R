@@ -90,6 +90,8 @@ print(ds)
 
 # Try creating the "add 100" to the trial number variable again
 # There's an error! Take a look at 6191_5.txt to see why.
+#ds$trial_num2 <- ds$trial_num + 100
+#its number "ten" and not 10
 # Use the col_types argument to force trial number to be an integer "i"
 # You might need to check ?read_tsv to see what options to use for the columns
 # trial_num should be integer, speed_actual and speed_response should be character, and correct should be logical
@@ -97,7 +99,9 @@ print(ds)
 # (It should work now, but you'll see a warning because of the erroneous data point)
 
 # ANSWER
-
+?read_tsv
+ds <- read_tsv(all_files_data_a,col_names = c("trial_num","speed_actual","speed_response","correct"),col_types="iccl")
+print(ds)
 
 ### QUESTION 7 -----
 
