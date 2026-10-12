@@ -37,6 +37,7 @@ col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 # ANSWER
 
+
 ### QUESTION 3a. ----- 
 
 # For some reason, the trial numbers for this experiment should start at 100
