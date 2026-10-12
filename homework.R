@@ -128,6 +128,7 @@ print(ds)
 # ANSWER
 install.packages("readxl")
 library(readxl)
+library(janitor)
 read_excel("data_B/participant_info.xlsx")
 sheet1 <- read_excel("data_B/participant_info.xlsx", sheet=1)
 print(sheet1)
