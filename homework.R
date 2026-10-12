@@ -40,7 +40,13 @@ col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 # ANSWER
 library(here)
 getwd()
-ds1 <- read_csv(data_A/6191_1.txt)
+#WD is this rproj folder 
+here("data_A/6191_1.txt")
+file.exists(here("data_A/6191_1.txt"))
+#Output comes back as true which means this file is in my wd
+ds1 <- read_tsv('data_A/6191_1.txt')
+print(ds1)
+
 ### QUESTION 3a. ----- 
 
 # For some reason, the trial numbers for this experiment should start at 100
